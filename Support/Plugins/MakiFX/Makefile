@@ -17,7 +17,7 @@ else
 	BUNDLE_DIR = MakiFX.ofx.bundle/Contents/Win64/
 endif
 
-MakiFX.ofx: CCKaleida.o KaleidaHeader.o UserDefinedShader.o  UserDefinedShaderHeader.o PluginRegistration.o ofxsCore.o ofxsImageEffect.o ofxsInteract.o ofxsLog.o ofxsMultiThread.o ofxsParams.o ofxsProperty.o ofxsPropertyValidation.o
+MakiFX.ofx: CCKaleida.o UserDefinedShader.o PluginRegistration.o ofxsCore.o ofxsImageEffect.o ofxsInteract.o ofxsLog.o ofxsMultiThread.o ofxsParams.o ofxsProperty.o ofxsPropertyValidation.o
 	$(CXX) $^ -o $@ $(LDFLAGS)
 	mkdir -p $(BUNDLE_DIR)
 	cp MakiFX.ofx $(BUNDLE_DIR)
